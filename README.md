@@ -1,4 +1,4 @@
 <body>
-  <h1>Storage</h1>
+  <h1 style="color: red;">Storage</h1>
   <p>Storage for personal projects</p>
 </body>
