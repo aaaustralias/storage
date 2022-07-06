@@ -1,134 +1,44 @@
 @charset "utf-8";
-/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Barlow+Condensed&display=swap');
+
+/* Main */
+
+:root {
+	--red: #ff4848;
+	--orange: #ffa851;
+	--yellow: #fff151;
+	--lime: #d3ff59;
+	--green: #8dff65;
+	--gray: #e8e8e8;
+	--shadow: 0 2px 4px 0 rgba(0,0,0,.3);
+	--shadow-white: 0px 0px 4px 2px rgb(255, 255, 255, .1);
+}
 
 body {
-	margin: 0px;
-}
-body {
-	background-color: #1e345d;
-	margin: 0px;
+	margin: 0 auto;
+	color: black;
+	font-family: 'Barlow Condensed', sans-serif;
+	height: 100%;
 }
 
-.dom-header {
+.background-image {
+	background: url("images/fallback-background.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	position: fixed;
-	top: 0px;
-	background-image: url("images/logo.png");
-	width: 100%;
-	height: 110px;
-	z-index: 1;
+	filter: blur(3px) opacity(80%);
+	min-height: 102%;
+	min-width: 102%;
+	left: -1%;
+	right: -1%;
+	top: -1;
+	bottom: -1%;
+	z-index: -100;
 }
 
-#head01 {
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 96px;
-	z-index: 1;
-}
-
-.splash-frame {
-	display: block;
-	margin-top: 110px;
-	width: 100%;
-	height: calc(100VH - 110px);
-}
-
-.logo {
-	width: 180px;
-	position: absolute;
-	left: 10px;
-	align-self: center;
-}
-
-nav {
-	padding: 8px 0;
-	box-shadow: var(--shadow);
-	display: inline-flex;
-	justify-content: flex-end;
-	width: 100%;
-	min-height: 60px;
-	background-color: rgba(0, 0, 0, 0.9);
-}
-
-.nav-container {
-	list-style-type: none;
-	display: inline-flex;
-	position: relative;
-	flex-wrap: wrap;
-	float: right;
-	margin-left: 200px;
-	right: 10px;
-}
-
-.nav-item {
-	padding: 4px;
-	margin: 2px 10px;
-	border-radius: 25px;
-	background-color: rgba(0, 0, 0, 0.6);
-	width: 8vw;
-	min-width: 80px;
-	text-align: center;
-}
-
-.nav-item:hover {
-	animation: jello-vertical .9s both;
-	cursor: pointer;
-}
-
-.nav-text {
-	text-decoration: none;
-	font-size: 20px;
-	color: rgba(255, 255, 255, 0.7);
-	font-weight: bold;
-}
-
-/* Dropdown - Server List */
-
-.dropdown-content {
-	display: none;
-	position: absolute;
-	color: white;
-	width: 8vw;
-	min-width: 80px;
-	background-color: rgba(0, 0, 0, 0.4);
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	border-bottom-left-radius: 25px;
-	border-bottom-right-radius: 25px;
-	z-index: 1;
-	padding: 4px;
-	margin-top: 4px;
-	list-style-type: none;
-	margin-left: -4px;
-	text-align: center;
-}
-
-.dropdown-item {
-	padding: 4px 0;
-}
-
-.dropdown-item:hover .nav-text {
-	font-weight: bold;
-	font-size: 20px;
-	animation:text-shadow-drop-center .6s both;
-}
-
-.dropdown-content .nav-text {
-	font-size: 18px;
-	font-weight: normal;
-}
-
-.dropdown:hover .dropdown-content {
-	display: block;
-	animation: dropdownDrop 300ms ease-in-out forwards;
-}
-
-.dropdown:hover {
-	animation: dropdownButton 150ms ease-in-out forwards;
-}
-
-.nav-container-2 {
-	display: none;
-}
+/* Scrollbar */
 
 ::-webkit-scrollbar-track
 {
@@ -146,9 +56,74 @@ nav {
 	border-radius: 10px;
 }
 
+/* Content */
+
+section.all-content {
+	width: clamp(15vw, 80vw, 100vw);
+	display: flex;
+	flex-flow: column;
+	margin: 3vh auto;
+	padding: 1vh 0;
+	text-align: center;
+	align-content: center;
+	background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 5px;
+	color: rgba(255, 255, 255, 0.7);
+	margin-top: 100px;
+}
+
+article.content {
+	padding: 0.5em;
+	max-width: 95%;
+	display: block;
+	margin: 0 auto;
+}
+
+article h1 {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 2.3em;
+	margin: 0.5em auto;
+}
+
+/* Image + Text */
+
+.image-text > .text-content {
+	padding: 0.5em;
+	margin: 0 1vw;
+	width: 46%;
+	float: right;
+	text-align: left;
+}
+
+.text-content > p, .text-content > h1 {
+	display: flow-root;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	font-size: 1em;
+}
+
+.text-content > h1 { font-size: 2.3em; }
+
+.image-text > .image-content > .image {
+	float: left;
+	width: 46%;
+	box-shadow: var(--shadow-white);
+	border-radius: 1vw;
+}
+
+.image-text > .image-content { margin: 0 1vw; }
+
+/* Phone & Smaller Screen */
+
 @media only screen and (max-width: 820px) {
 	/* Navbar */
-	.nav-container { display: none; }
-	.nav-container-2 { display: inline-flex; list-style-type: none; padding: 0; }
-	.nav-item-2 { min-width: 35px; }
+	/* Content */
+	section.all-content { width: 95vw; }
+	/* Image+Text */
+	.image-text > .text-content { text-align: center; width: 100%; float: none; margin: 0 auto; padding: 0; }
+	.image-text > .image-content > .image { width: 95%; float: none; margin-bottom: 3vw;}
 }
+
+/* Animations */
+
