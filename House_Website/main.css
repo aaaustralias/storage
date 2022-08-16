@@ -1,0 +1,60 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Barlow+Condensed&display=swap');
+/* CSS Document */
+
+body{background-color:#1e345d;text-align:center;color:white;font-family: 'Arvo', serif; font-family: 'Barlow Condensed', sans-serif;border:1px solid white;font-size: 22px;margin: 0 auto;}
+
+h1.page-title{ font-size: 44px; }
+
+.house-sections {
+	max-width: 80%;
+	margin: 0 auto;
+	border: 1px solid red;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.house-sections > article {
+	margin: 0;
+	padding: 0;
+	border: 1px solid green;
+	min-width: 48%;
+	max-width: 48%;
+	top: 0;
+}
+
+.house-sections > article > p {
+	border: 1px solid yellow;
+	max-width: 60%;
+	margin: 0 auto;
+}
+
+img {
+	max-width: 300px;
+}
+
+.image-text > .text-content {
+	padding: 0.5em;
+	margin: 0 1vw;
+	width: 46%;
+	float: right;
+	text-align: left;
+}
+
+.text-content > p, .text-content > h1 {
+	display: flow-root;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	font-size: 1em;
+}
+
+.text-content > h1 { font-size: 2.3em; }
+
+.image-text > .image-content > .image {
+	float: left;
+	width: 46%;
+	box-shadow: var(--shadow-white);
+	border-radius: 1vw;
+}
+
+.image-text > .image-content { margin: 0 1vw; }
