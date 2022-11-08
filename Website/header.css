@@ -11,6 +11,7 @@
 body {
 	margin: 0 auto;
 	font-family: 'Barlow Condensed', sans-serif;
+	overflow: hidden;
 }
 
 .splash-frame {
