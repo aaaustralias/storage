@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Cookie Clicker</title>
+		<script src="main.js"></script>
+		<link rel="stylesheet" href="style.css" type="text/css">
+	</head>
+	<body onload="alert('hey')">
+		<article class="overlay">
+			<section class="clickersection" style="flex: 1;">
+				<h1>You have <span class="count">0</span> Cells</h1>
+				<span id="cookiespan" class="cookie" onClick="clickcookie()"></span>
+			</section>
+			<section class="clickersection" style="flex: 2;">
+				<div class="panel-navbar">
+					<div class="autoclicker-panel" style="flex: 1; border-top-right-radius: 0;" onClick="selectpanel('autoclicker')">
+						<h2>AutoClickers</h2>
+					</div>
+
+					<div class="upgrade-panel" style="flex: 2; border-top-left-radius: 0;" onClick="selectpanel('upgrade')">
+						<h2>Upgrades</h2>
+					</div>
+				</div>
+				<div class="autoclicker-content panel-content" style="display: none;">
+				</div>
+				<div class="upgrade-content panel-content" style="display: none;">
+					<div class="upgrade-button panel-button">Cell I</div>
+					<div class="upgrade-button panel-button">Cell II</div>
+					<div class="upgrade-button panel-button">Cell III</div>
+				</div>
+			</section>
+		</article>
+	</body>
+</html>

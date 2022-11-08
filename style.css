@@ -1,0 +1,116 @@
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Bebas+Neue&family=Poor+Story&display=swap');
+
+body {
+	background-image: url("images/background.jpg");
+	background-size: cover;
+	margin: 0;
+	color: white;
+	font-family: 'Poor Story', cursive;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+body, html {
+	height: 95%;
+	min-height: 95%;
+}
+
+.overlay {
+	margin: 2em;
+	user-select: none;
+	border-radius: 15px;
+	display: flex;
+	height: 100%;
+}
+
+section.clickersection {
+	background: rgba(12,17,22,0.85);
+	border: 1px solid white;
+	max-width: 48%;
+	min-width: 48%;
+	border-radius: 15px;
+	text-align: center;
+	margin: auto;
+	height: 96%;
+}
+
+.cookie {
+	cursor: pointer;
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+	background-image: url("images/cookie.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.cookie:active {
+	animation: shake 0.15s;
+}
+
+;#cookiespan {
+	box-shadow: 0 0 15px 10px rgba(59,59,59,0.52);
+}
+
+h1 {
+	color: white;
+	font-size: 32px;
+}
+
+.panel-navbar {
+	display: flex;
+	border-radius: 15px;
+}
+
+.panel-navbar > * {
+	border: 1px solid white;
+	max-width: 50%;
+	padding: 0;
+	border-radius: inherit;
+	cursor: pointer;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	background-color: rgba(132,132,132,0.5);
+}
+
+.panel-content {
+	border: 1px solid green;
+	text-align: left;
+	padding: 0 10px;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	margin-top: 20px;
+}
+
+.panel-content > * {
+	border: 1px solid white;
+	border-radius: 15px;
+	background-color: rgba(223,157,255,0.50);
+	width: 28%;
+	height: 75px;
+	margin: 5px;
+	padding: 10px;
+}
+
+.panel-content > img {
+	width: 50px;
+	height: auto;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
